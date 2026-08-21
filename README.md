@@ -1,3 +1,4 @@
+**WARNING THIS SCRIPT IS BETA AND ANY DAMAGE CAUSED IS NOT MY RESPONSIBILITY TAKE CAUTION**
 # The-newer-Waydorid-installer-for-Fedora-and-Arch-Linux
 This is a new project i have been working on for a bit of time of course others have done things like this but this is unique in its own little way please report all bugs and recommend improvements!
 <img width="3840" height="2136" alt="Screenshot From 2026-08-19 10-45-04" src="https://github.com/user-attachments/assets/cb0b909a-7627-41ee-a037-a8e1d9bbe7e6" />
