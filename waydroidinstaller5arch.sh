@@ -1,18 +1,23 @@
 #!/bin/bash
-
+sudo -v || exit 1
 # Check gum is installed before we try to use it
 if ! command -v gum &> /dev/null; then
-  echo "gum is required but not installed. Install it first: https://github.com/charmbracelet/gum"
-  exit 1
+  echo "gum is required but not installed. Install it first:"
+  if gum confirm "Install gum?"; then
+    gum spin --title "Installing Gum" -- sudo pacman -S gum || exit 1
+    echo "Installed Gum"
+  else
+    echo "It is necessary! Aborting......"
+    exit 1
+  fi
 fi
+
 if ! command -v figlet &> /dev/null; then
   echo "figlet is required but not installed. Install it first: sudo pacman -S figlet"
   exit 1
 fi
 
-# Request sudo password once at the start
-sudo -v || exit 1
-echo WELCOME TO THE WAYDROID INSTALLER 
+echo "WELCOME TO THE WAYDROID INSTALLER"
 
 if gum confirm "Update system? (this is highly recommended)"; then
   gum spin --title "Updating system..." -- sudo pacman -Syu || exit 1
